@@ -1159,7 +1159,7 @@ var Media = function Media(props) {
           lineNumber: 7
         }
       },
-      props.show.summary.replace(/<[/]?p>/g, '')
+      props.show.summary
     ),
     __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('img', { src: props.show.image.medium, __source: {
         fileName: _jsxFileName,

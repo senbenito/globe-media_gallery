@@ -18,7 +18,7 @@ const Index = (props) => (
 )
 
 Index.getInitialProps = async function() {
-  const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
+  const res = await fetch('https://images-api.nasa.gov/search')
   const data = await res.json()
 
   console.log(`Media data fetched. Count: ${data.length}`)

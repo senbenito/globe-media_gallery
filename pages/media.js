@@ -4,7 +4,7 @@ import fetch from 'isomorphic-unfetch'
 const Media =  (props) => (
     <Layout>
        <h1>{props.show.name}</h1>
-       <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
+       <p>{props.show.summary}</p>
        <img src={props.show.image.medium}/>
     </Layout>
 )
