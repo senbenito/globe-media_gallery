@@ -1,6 +1,5 @@
 import Header from './Header'
-import Gallery from './Gallery'
-
+import Galleria from './Galleria'
 
 const layoutStyle = {
   margin: 20,
@@ -8,11 +7,19 @@ const layoutStyle = {
   border: '1px solid #DDD'
 }
 
+const galleriaStyle = {
+  maxWidth: 700,
+  height: 400,
+  background: '#000'
+}
+
 const Layout = (props) => (
   <div style={layoutStyle}>
-    <Gallery />
+    <Galleria />
     <Header />
-    {props.children}
+    <div className={galleriaStyle}>
+      {props.children}
+    </div>
   </div>
 )
 
