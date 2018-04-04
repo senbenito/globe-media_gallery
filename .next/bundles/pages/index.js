@@ -174,14 +174,10 @@ var _default = Header;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_jsx_style__ = __webpack_require__("./node_modules/styled-jsx/style.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_styled_jsx_style__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Header__ = __webpack_require__("./components/Header.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Galleria__ = __webpack_require__("./components/Galleria.js");
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Header__ = __webpack_require__("./components/Header.js");
 var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Layout.js';
-
 
 
 (function () {
@@ -192,50 +188,22 @@ var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boil
 
 
 
-
-var galleriaTheme = function galleriaTheme() {
-  return __WEBPACK_IMPORTED_MODULE_3__Galleria__["a" /* default */].loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.fullscreen.min.js').run('.galleria', {
-    transition: 'fade',
-    imageCrop: true
-  });
-};
-
 var Layout = function Layout(props) {
-  return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
     {
-      className: 'jsx-550562050',
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 4
       }
     },
-    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Header__["a" /* default */], {
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Header__["a" /* default */], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 5
       }
     }),
-    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-      'div',
-      {
-        className: 'jsx-550562050',
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16
-        }
-      },
-      props.children
-    ),
-    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Galleria__["a" /* default */], { onLoad: galleriaTheme, __source: {
-        fileName: _jsxFileName,
-        lineNumber: 19
-      }
-    }),
-    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default.a, {
-      styleId: '550562050',
-      css: '.galleria{max-width:700px;height:100px;background:white;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvTGF5b3V0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQW1CdUIsQUFHeUIsZ0JBQ0gsYUFDSSxpQkFDbkIiLCJmaWxlIjoiY29tcG9uZW50cy9MYXlvdXQuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL3NoYW5ub24ucml2ZXJzL1Byb2plY3RzL0dMT0JFLU1lZGlhX0dhbGxlcnkvbmV4dC1ib2lsZXJwbGF0ZSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBIZWFkZXIgZnJvbSAnLi9IZWFkZXInXG5pbXBvcnQgR2FsbGVyaWEgZnJvbSAnLi9HYWxsZXJpYSdcblxuY29uc3QgZ2FsbGVyaWFUaGVtZSA9ICgpID0+IChcbiAgR2FsbGVyaWFcbiAgLmxvYWRUaGVtZSgnaHR0cHM6Ly9jZG5qcy5jbG91ZGZsYXJlLmNvbS9hamF4L2xpYnMvZ2FsbGVyaWEvMS41LjcvdGhlbWVzL2NsYXNzaWMvZ2FsbGVyaWEuZnVsbHNjcmVlbi5taW4uanMnKVxuICAucnVuKCcuZ2FsbGVyaWEnLCB7XG4gICAgdHJhbnNpdGlvbjogJ2ZhZGUnLFxuICAgIGltYWdlQ3JvcDogdHJ1ZSxcbiAgfSlcbilcblxuY29uc3QgTGF5b3V0ID0gKHByb3BzKSA9PiAoXG4gIDxkaXY+XG4gICAgPEhlYWRlciAvPlxuICAgIDxkaXY+XG4gICAgICB7cHJvcHMuY2hpbGRyZW59XG4gICAgPC9kaXY+XG4gICAgPEdhbGxlcmlhIG9uTG9hZD17Z2FsbGVyaWFUaGVtZX0vPlxuICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICAuZ2FsbGVyaWF7XG4gICAgICAgIG1heC13aWR0aDogNzAwcHg7XG4gICAgICAgIGhlaWdodDogMTAwcHg7XG4gICAgICAgIGJhY2tncm91bmQ6IHdoaXRlO1xuICAgICAgfVxuICAgIGB9PC9zdHlsZT5cbiAgPC9kaXY+XG4pXG5cbmV4cG9ydCBkZWZhdWx0IExheW91dFxuIl19 */\n/*@ sourceURL=components/Layout.js */'
-    })
+    props.children
   );
 };
 
@@ -252,7 +220,6 @@ var _default = Layout;
     return;
   }
 
-  reactHotLoader.register(galleriaTheme, 'galleriaTheme', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Layout.js');
   reactHotLoader.register(Layout, 'Layout', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Layout.js');
   reactHotLoader.register(_default, 'default', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Layout.js');
   leaveModule(module);
@@ -2002,15 +1969,19 @@ module.exports = function(originalModule) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__("./node_modules/babel-runtime/regenerator/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Layout_js__ = __webpack_require__("./components/Layout.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_next_link__ = __webpack_require__("./node_modules/next/link.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_next_link__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_isomorphic_unfetch__ = __webpack_require__("./node_modules/isomorphic-unfetch/browser.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_isomorphic_unfetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_isomorphic_unfetch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_jsx_style__ = __webpack_require__("./node_modules/styled-jsx/style.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_jsx_style___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_styled_jsx_style__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Layout__ = __webpack_require__("./components/Layout.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Galleria__ = __webpack_require__("./components/Galleria.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_next_link__ = __webpack_require__("./node_modules/next/link.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_next_link__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_isomorphic_unfetch__ = __webpack_require__("./node_modules/isomorphic-unfetch/browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_isomorphic_unfetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_isomorphic_unfetch__);
 
 var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/index.js';
+
 
 
 (function () {
@@ -2025,66 +1996,79 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 
 
+
+var galleriaTheme = function galleriaTheme() {
+  return __WEBPACK_IMPORTED_MODULE_4__components_Galleria__["a" /* default */].loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.fullscreen.min.js').run('.galleria', {
+    transition: 'fade',
+    imageCrop: true
+  });
+};
+
 var Index = function Index(props) {
-  return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_2__components_Layout_js__["a" /* default */],
+  return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_3__components_Layout__["a" /* default */],
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 6
+        lineNumber: 16
       }
     },
-    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
       'h1',
       {
+        className: 'jsx-550562050',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 7
+          lineNumber: 17
         }
       },
       'GLOBE Media Gallery'
     ),
-    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-      'ul',
+    __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
+      'div',
       {
+        className: 'jsx-550562050' + ' ' + 'galleria',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 8
+          lineNumber: 18
         }
       },
       props.media.map(function (medium) {
-        return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-          'li',
-          { key: medium.data[0].nasa_id, className: 'galleria', __source: {
+        return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_5_next_link___default.a,
+          { as: '/media/' + medium.data[0].nasa_id, href: '/media?id=' + medium.data[0].nasa_id, __source: {
               fileName: _jsxFileName,
-              lineNumber: 10
+              lineNumber: 20
             }
           },
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_next_link___default.a,
-            { as: '/media/' + medium.data[0].nasa_id, href: '/media?id=' + medium.data[0].nasa_id, __source: {
+          __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(
+            'a',
+            {
+              className: 'jsx-550562050',
+              __source: {
                 fileName: _jsxFileName,
-                lineNumber: 11
+                lineNumber: 21
               }
             },
-            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-              'a',
-              {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 12
-                }
-              },
-              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('img', { src: 'https://images-assets.nasa.gov/image/' + medium.data[0].nasa_id + '/' + medium.data[0].nasa_id + '~thumb.jpg', __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 13
-                }
-              })
-            )
+            __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement('img', { src: 'https://images-assets.nasa.gov/image/' + medium.data[0].nasa_id + '/' + medium.data[0].nasa_id + '~thumb.jpg', className: 'jsx-550562050',
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 21
+              }
+            })
           )
         );
       })
-    )
+    ),
+    __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Galleria__["a" /* default */], { onLoad: galleriaTheme, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      }
+    }),
+    __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_styled_jsx_style___default.a, {
+      styleId: '550562050',
+      css: '.galleria{max-width:700px;height:100px;background:white;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXlCdUIsQUFHeUIsZ0JBQ0gsYUFDSSxpQkFDbkIiLCJmaWxlIjoicGFnZXMvaW5kZXguanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL3NoYW5ub24ucml2ZXJzL1Byb2plY3RzL0dMT0JFLU1lZGlhX0dhbGxlcnkvbmV4dC1ib2lsZXJwbGF0ZSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBMYXlvdXQgZnJvbSAnLi4vY29tcG9uZW50cy9MYXlvdXQnXG5pbXBvcnQgR2FsbGVyaWEgZnJvbSAnLi4vY29tcG9uZW50cy9HYWxsZXJpYSdcbmltcG9ydCBMaW5rIGZyb20gJ25leHQvbGluaydcbmltcG9ydCBmZXRjaCBmcm9tICdpc29tb3JwaGljLXVuZmV0Y2gnXG5cbmNvbnN0IGdhbGxlcmlhVGhlbWUgPSAoKSA9PiAoXG4gIEdhbGxlcmlhXG4gIC5sb2FkVGhlbWUoJ2h0dHBzOi8vY2RuanMuY2xvdWRmbGFyZS5jb20vYWpheC9saWJzL2dhbGxlcmlhLzEuNS43L3RoZW1lcy9jbGFzc2ljL2dhbGxlcmlhLmZ1bGxzY3JlZW4ubWluLmpzJylcbiAgLnJ1bignLmdhbGxlcmlhJywge1xuICAgIHRyYW5zaXRpb246ICdmYWRlJyxcbiAgICBpbWFnZUNyb3A6IHRydWUsXG4gIH0pXG4pXG5cbmNvbnN0IEluZGV4ID0gKHByb3BzKSA9PiAoXG4gIDxMYXlvdXQ+XG4gICAgPGgxPkdMT0JFIE1lZGlhIEdhbGxlcnk8L2gxPlxuICAgIDxkaXYgY2xhc3NOYW1lPXsnZ2FsbGVyaWEnfT5cbiAgICAgIHtwcm9wcy5tZWRpYS5tYXAobWVkaXVtID0+IChcbiAgICAgICAgPExpbmsgYXM9e2AvbWVkaWEvJHttZWRpdW0uZGF0YVswXS5uYXNhX2lkfWB9IGhyZWY9e2AvbWVkaWE/aWQ9JHttZWRpdW0uZGF0YVswXS5uYXNhX2lkfWB9PlxuICAgICAgICAgIDxhPjxpbWcgc3JjPXtgaHR0cHM6Ly9pbWFnZXMtYXNzZXRzLm5hc2EuZ292L2ltYWdlLyR7bWVkaXVtLmRhdGFbMF0ubmFzYV9pZH0vJHttZWRpdW0uZGF0YVswXS5uYXNhX2lkfX50aHVtYi5qcGdgfS8+PC9hPlxuICAgICAgICA8L0xpbms+XG4gICAgICApKX1cbiAgICA8L2Rpdj5cbiAgICA8R2FsbGVyaWEgb25Mb2FkPXtnYWxsZXJpYVRoZW1lfS8+XG4gICAgPHN0eWxlIGpzeCBnbG9iYWw+e2BcbiAgICAgIC5nYWxsZXJpYXtcbiAgICAgICAgbWF4LXdpZHRoOiA3MDBweDtcbiAgICAgICAgaGVpZ2h0OiAxMDBweDtcbiAgICAgICAgYmFja2dyb3VuZDogd2hpdGU7XG4gICAgICB9XG4gICAgYH08L3N0eWxlPlxuICA8L0xheW91dD5cbilcblxuSW5kZXguZ2V0SW5pdGlhbFByb3BzID0gYXN5bmMgZnVuY3Rpb24oKSB7XG4gIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKCdodHRwczovL2ltYWdlcy1hcGkubmFzYS5nb3Yvc2VhcmNoP3E9Z2xvYmUnKVxuICBjb25zdCBkYXRhID0gYXdhaXQgcmVzLmpzb24oKVxuXG4gIC8vIGNvbnNvbGUubG9nKGBNZWRpYSBkYXRhIGZldGNoZWQuIENvdW50OiAke2RhdGEuY29sbGVjdGlvbi5pdGVtcy5sZW5ndGh9YClcbiAgY29uc29sZS5sb2coZGF0YS5jb2xsZWN0aW9uLml0ZW1zKTtcblxuICByZXR1cm4ge1xuICAgIG1lZGlhOiBkYXRhLmNvbGxlY3Rpb24uaXRlbXNcbiAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBJbmRleFxuIl19 */\n/*@ sourceURL=pages/index.js */'
+    })
   );
 };
 
@@ -2095,7 +2079,7 @@ Index.getInitialProps = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODUL
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return __WEBPACK_IMPORTED_MODULE_4_isomorphic_unfetch___default()('https://images-api.nasa.gov/search?q=globe');
+          return __WEBPACK_IMPORTED_MODULE_6_isomorphic_unfetch___default()('https://images-api.nasa.gov/search?q=globe');
 
         case 2:
           res = _context.sent;
@@ -2134,6 +2118,7 @@ var _default = Index;
     return;
   }
 
+  reactHotLoader.register(galleriaTheme, 'galleriaTheme', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/index.js');
   reactHotLoader.register(Index, 'Index', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/index.js');
   reactHotLoader.register(_default, 'default', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/index.js');
   leaveModule(module);
