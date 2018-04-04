@@ -2,7 +2,7 @@ import Layout from '../components/Layout.js'
 import fetch from 'isomorphic-unfetch'
 
 const Media =  (props) => (
-    <Layout>
+    <Layout className={'galleria'}>
        <h1>{props.medium.collection.items[0].data[0].title}</h1>
        <p>{props.medium.collection.items[0].data[0].description}</p>
        <img src={props.medium.collection.items[0].links[0].href}/>
@@ -14,7 +14,6 @@ Media.getInitialProps = async function (context) {
   const res = await fetch(`https://images-api.nasa.gov/search?q=&nasa_id=${id}`)
   const medium = await res.json()
 
-  console.log(medium.collection.items);
   console.log(`Fetched media: ${medium.collection.items[0].data[0].title}`)
 
   return { medium }

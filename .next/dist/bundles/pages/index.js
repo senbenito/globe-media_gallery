@@ -72,13 +72,6 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/Galleria.css":
-/***/ (function(module, exports) {
-
-throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type.\n| .galleria {\n|   background: #000;\n|   height: 400px;");
-
-/***/ }),
-
 /***/ "./components/Galleria.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -87,48 +80,35 @@ throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an ap
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head__ = __webpack_require__("next/head");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_head__);
-var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Galleria.js';
+var _jsxFileName = "/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Galleria.js";
 
 
-
-var scriptTest = function scriptTest() {
-  return Galleria ? $("body").text('Galleria works') : $("body").text('NO Galleria');
-};
 
 var Galleria = function Galleria() {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'div',
+    "div",
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 4
       }
     },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'button',
-      { onClick: scriptTest, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        }
-      },
-      'Test Script'
-    ),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_1_next_head___default.a,
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 5
         }
       },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js', __source: {
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("script", { src: "https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js", __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 6
         }
       }),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js', __source: {
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("script", { src: "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js", __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 7
         }
       })
     )
@@ -209,53 +189,61 @@ var Header = function Header() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Header__ = __webpack_require__("./components/Header.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Galleria__ = __webpack_require__("./components/Galleria.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Galleria_css__ = __webpack_require__("./components/Galleria.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Galleria_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Galleria_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_jsx_style__ = __webpack_require__("styled-jsx/style");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_styled_jsx_style__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Header__ = __webpack_require__("./components/Header.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Galleria__ = __webpack_require__("./components/Galleria.js");
 var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Layout.js';
 
 
 
 
 
-var layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
+var galleriaTheme = function galleriaTheme() {
+  return __WEBPACK_IMPORTED_MODULE_3__Galleria__["a" /* default */].loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.fullscreen.min.js').run('.galleria', {
+    transition: 'fade',
+    imageCrop: true
+  });
 };
 
 var Layout = function Layout(props) {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
     'div',
-    { style: layoutStyle, __source: {
-        fileName: _jsxFileName,
-        lineNumber: 12
-      }
-    },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Galleria__["a" /* default */], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13
-      }
-    }),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Header__["a" /* default */], {
+    {
+      className: 'jsx-550562050',
       __source: {
         fileName: _jsxFileName,
         lineNumber: 14
       }
+    },
+    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Header__["a" /* default */], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      }
     }),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
       'div',
-      { className: galleria, __source: {
+      {
+        className: 'jsx-550562050',
+        __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 16
         }
       },
       props.children
-    )
+    ),
+    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Galleria__["a" /* default */], { onLoad: galleriaTheme, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      }
+    }),
+    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default.a, {
+      styleId: '550562050',
+      css: '.galleria{max-width:700px;height:100px;background:white;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvTGF5b3V0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQW1CdUIsQUFHeUIsZ0JBQ0gsYUFDSSxpQkFDbkIiLCJmaWxlIjoiY29tcG9uZW50cy9MYXlvdXQuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL3NoYW5ub24ucml2ZXJzL1Byb2plY3RzL0dMT0JFLU1lZGlhX0dhbGxlcnkvbmV4dC1ib2lsZXJwbGF0ZSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBIZWFkZXIgZnJvbSAnLi9IZWFkZXInXG5pbXBvcnQgR2FsbGVyaWEgZnJvbSAnLi9HYWxsZXJpYSdcblxuY29uc3QgZ2FsbGVyaWFUaGVtZSA9ICgpID0+IChcbiAgR2FsbGVyaWFcbiAgLmxvYWRUaGVtZSgnaHR0cHM6Ly9jZG5qcy5jbG91ZGZsYXJlLmNvbS9hamF4L2xpYnMvZ2FsbGVyaWEvMS41LjcvdGhlbWVzL2NsYXNzaWMvZ2FsbGVyaWEuZnVsbHNjcmVlbi5taW4uanMnKVxuICAucnVuKCcuZ2FsbGVyaWEnLCB7XG4gICAgdHJhbnNpdGlvbjogJ2ZhZGUnLFxuICAgIGltYWdlQ3JvcDogdHJ1ZSxcbiAgfSlcbilcblxuY29uc3QgTGF5b3V0ID0gKHByb3BzKSA9PiAoXG4gIDxkaXY+XG4gICAgPEhlYWRlciAvPlxuICAgIDxkaXY+XG4gICAgICB7cHJvcHMuY2hpbGRyZW59XG4gICAgPC9kaXY+XG4gICAgPEdhbGxlcmlhIG9uTG9hZD17Z2FsbGVyaWFUaGVtZX0vPlxuICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICAuZ2FsbGVyaWF7XG4gICAgICAgIG1heC13aWR0aDogNzAwcHg7XG4gICAgICAgIGhlaWdodDogMTAwcHg7XG4gICAgICAgIGJhY2tncm91bmQ6IHdoaXRlO1xuICAgICAgfVxuICAgIGB9PC9zdHlsZT5cbiAgPC9kaXY+XG4pXG5cbmV4cG9ydCBkZWZhdWx0IExheW91dFxuIl19 */\n/*@ sourceURL=components/Layout.js */'
+    })
   );
 };
 
@@ -317,7 +305,7 @@ var Index = function Index(props) {
       props.media.map(function (medium) {
         return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
           'li',
-          { key: medium.data[0].nasa_id, __source: {
+          { key: medium.data[0].nasa_id, className: 'galleria', __source: {
               fileName: _jsxFileName,
               lineNumber: 10
             }
@@ -427,6 +415,13 @@ module.exports = require("next/link");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "styled-jsx/style":
+/***/ (function(module, exports) {
+
+module.exports = require("styled-jsx/style");
 
 /***/ })
 
