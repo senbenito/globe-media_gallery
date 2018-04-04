@@ -67,70 +67,10 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./components/Gallery.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head__ = __webpack_require__("next/head");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_head__);
-var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Gallery.js';
-
-
-
-var scriptTest = function scriptTest() {
-  return Galleria ? $("body").text('Galleria works') : $("body").text('NO Galleria');
-};
-
-var Gallery = function Gallery() {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'div',
-    {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10
-      }
-    },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'button',
-      { onClick: scriptTest, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        }
-      },
-      'Test Script'
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_next_head___default.a,
-      {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        }
-      },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        }
-      }),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        }
-      })
-    )
-  );
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (Gallery);
-
-/***/ }),
 
 /***/ "./components/Header.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -205,9 +145,7 @@ var Header = function Header() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Header__ = __webpack_require__("./components/Header.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Gallery__ = __webpack_require__("./components/Gallery.js");
 var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Layout.js';
-
 
 
 
@@ -222,19 +160,13 @@ var Layout = function Layout(props) {
     'div',
     { style: layoutStyle, __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 10
       }
     },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Gallery__["a" /* default */], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13
-      }
-    }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Header__["a" /* default */], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 11
       }
     }),
     props.children
@@ -350,8 +282,8 @@ Index.getInitialProps = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODUL
           data = _context.sent;
 
 
-          // console.log(`Media data fetched. Count: ${data.collection.items.length}`)
-          console.log(data.collection.items);
+          console.log('Media data fetched. Count: ' + data.collection.items.length);
+          // console.log(data.collection.items);
 
           return _context.abrupt('return', {
             media: data.collection.items
@@ -369,7 +301,7 @@ Index.getInitialProps = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODUL
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("./pages/index.js");
@@ -388,13 +320,6 @@ module.exports = require("babel-runtime/regenerator");
 /***/ (function(module, exports) {
 
 module.exports = require("isomorphic-unfetch");
-
-/***/ }),
-
-/***/ "next/head":
-/***/ (function(module, exports) {
-
-module.exports = require("next/head");
 
 /***/ }),
 

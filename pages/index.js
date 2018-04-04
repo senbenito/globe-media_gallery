@@ -23,8 +23,8 @@ Index.getInitialProps = async function() {
   const res = await fetch('https://images-api.nasa.gov/search?q=globe')
   const data = await res.json()
 
-  // console.log(`Media data fetched. Count: ${data.collection.items.length}`)
-  console.log(data.collection.items);
+  console.log(`Media data fetched. Count: ${data.collection.items.length}`)
+  // console.log(data.collection.items);
 
   return {
     media: data.collection.items
