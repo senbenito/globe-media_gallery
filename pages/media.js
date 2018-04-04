@@ -14,7 +14,6 @@ Media.getInitialProps = async function (context) {
   const res = await fetch(`https://images-api.nasa.gov/search?q=&nasa_id=${id}`)
   const medium = await res.json()
 
-  console.log(medium.collection.items);
   console.log(`Fetched media: ${medium.collection.items[0].data[0].title}`)
 
   return { medium }

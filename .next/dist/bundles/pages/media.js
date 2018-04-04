@@ -149,6 +149,7 @@ var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boil
 
 
 
+<<<<<<< HEAD
 var layoutStyle = {
   margin: 20,
   padding: 20,
@@ -161,12 +162,25 @@ var Layout = function Layout(props) {
     { style: layoutStyle, __source: {
         fileName: _jsxFileName,
         lineNumber: 10
+=======
+var Layout = function Layout(props) {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 4
+>>>>>>> 2c4847f8ab8bd56b285d9f094d870f5ede22f3b6
       }
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Header__["a" /* default */], {
       __source: {
         fileName: _jsxFileName,
+<<<<<<< HEAD
         lineNumber: 11
+=======
+        lineNumber: 5
+>>>>>>> 2c4847f8ab8bd56b285d9f094d870f5ede22f3b6
       }
     }),
     props.children
@@ -255,12 +269,11 @@ Media.getInitialProps = function () {
             medium = _context.sent;
 
 
-            console.log(medium.collection.items);
             console.log('Fetched media: ' + medium.collection.items[0].data[0].title);
 
             return _context.abrupt('return', { medium: medium });
 
-          case 10:
+          case 9:
           case 'end':
             return _context.stop();
         }
