@@ -9,12 +9,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Layout_js__ = __webpack_require__("./components/Layout.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Layout__ = __webpack_require__("./components/Layout.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_next_link__ = __webpack_require__("./node_modules/next/link.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_next_link__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_isomorphic_unfetch__ = __webpack_require__("./node_modules/isomorphic-unfetch/browser.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_isomorphic_unfetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_isomorphic_unfetch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Galleria__ = __webpack_require__("./components/Galleria.js");
 
 var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/index.js';
 
@@ -31,21 +30,13 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 
 
-
-var galleriaTheme = function galleriaTheme() {
-  return __WEBPACK_IMPORTED_MODULE_5__components_Galleria__["a" /* default */].loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.fullscreen.min.js').run('.galleria', {
-    transition: 'fade',
-    imageCrop: true
-  });
-};
-
 var Index = function Index(props) {
   return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_2__components_Layout_js__["a" /* default */],
+    __WEBPACK_IMPORTED_MODULE_2__components_Layout__["a" /* default */],
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 6
       }
     },
     __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
@@ -53,31 +44,49 @@ var Index = function Index(props) {
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 7
         }
       },
       'GLOBE Media Gallery'
     ),
     __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-      'div',
-      { className: 'galleria', __source: {
+      'ul',
+      {
+        __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 8
         }
       },
       props.media.map(function (medium) {
         return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_next_link___default.a,
-          { as: '/media/' + medium.data[0].nasa_id, href: '/media?id=' + medium.data[0].nasa_id, __source: {
+          'li',
+          { key: medium.data[0].nasa_id, __source: {
               fileName: _jsxFileName,
-              lineNumber: 20
+              lineNumber: 10
             }
           },
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('img', { src: 'https://images-assets.nasa.gov/image/' + medium.data[0].nasa_id + '/' + medium.data[0].nasa_id + '~thumb.jpg', __source: {
-              fileName: _jsxFileName,
-              lineNumber: 21
-            }
-          })
+          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_3_next_link___default.a,
+            { as: '/media/' + medium.data[0].nasa_id, href: '/media?id=' + medium.data[0].nasa_id, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 11
+              }
+            },
+            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+              'a',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 12
+                }
+              },
+              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('img', { src: 'https://images-assets.nasa.gov/image/' + medium.data[0].nasa_id + '/' + medium.data[0].nasa_id + '~thumb.jpg', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 12
+                }
+              })
+            )
+          )
         );
       })
     )
@@ -102,8 +111,8 @@ Index.getInitialProps = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODUL
           data = _context.sent;
 
 
-          // console.log(`Media data fetched. Count: ${data.collection.items.length}`)
-          console.log(data.collection.items);
+          console.log('Media data fetched. Count: ' + data.collection.items.length);
+          // console.log(data.collection.items);
 
           return _context.abrupt('return', {
             media: data.collection.items
@@ -130,7 +139,6 @@ var _default = Index;
     return;
   }
 
-  reactHotLoader.register(galleriaTheme, 'galleriaTheme', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/index.js');
   reactHotLoader.register(Index, 'Index', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/index.js');
   reactHotLoader.register(_default, 'default', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/index.js');
   leaveModule(module);
@@ -160,4 +168,4 @@ var _default = Index;
 /***/ })
 
 })
-//# sourceMappingURL=3.0730463ebfe0ef10e412.hot-update.js.map
+//# sourceMappingURL=3.36353a0a821f7c5c6a8f.hot-update.js.map
