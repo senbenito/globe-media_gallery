@@ -1,4 +1,6 @@
 import Header from './Header'
+import Gallery from './Gallery'
+
 
 const layoutStyle = {
   margin: 20,
@@ -8,6 +10,7 @@ const layoutStyle = {
 
 const Layout = (props) => (
   <div style={layoutStyle}>
+    <Gallery />
     <Header />
     {props.children}
   </div>

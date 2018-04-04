@@ -7,9 +7,11 @@ const Index = (props) => (
     <h1>GLOBE Media Gallery</h1>
     <ul>
       {props.media.map(medium => (
-        <li key={medium.id}>
-          <Link as={`/media/${medium.id}`} href={`/media?id=${medium.id}`}>
-            <a>{medium.name}</a>
+        <li key={medium.data[0].nasa_id}>
+          <Link as={`/media/${medium.data[0].nasa_id}`} href={`/media?id=${medium.data[0].nasa_id}`}>
+            <a>
+              <img src={`https://images-assets.nasa.gov/image/${medium.data[0].nasa_id}/${medium.data[0].nasa_id}~thumb.jpg`}/>
+            </a>
           </Link>
         </li>
       ))}
@@ -18,18 +20,14 @@ const Index = (props) => (
 )
 
 Index.getInitialProps = async function() {
-  const res = await fetch('https://images-api.nasa.gov/search')
+  const res = await fetch('https://images-api.nasa.gov/search?q=globe')
   const data = await res.json()
 
-  console.log(`Media data fetched. Count: ${data.length}`)
-
-  data.medium = []
-  data.map(e=>{
-     data.medium.push(e.show)
-  })
+  // console.log(`Media data fetched. Count: ${data.collection.items.length}`)
+  console.log(data.collection.items);
 
   return {
-    media: data.medium,
+    media: data.collection.items
   }
 }
 

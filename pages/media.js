@@ -3,20 +3,21 @@ import fetch from 'isomorphic-unfetch'
 
 const Media =  (props) => (
     <Layout>
-       <h1>{props.show.name}</h1>
-       <p>{props.show.summary}</p>
-       <img src={props.show.image.medium}/>
+       <h1>{props.medium.collection.items[0].data[0].title}</h1>
+       <p>{props.medium.collection.items[0].data[0].description}</p>
+       <img src={props.medium.collection.items[0].links[0].href}/>
     </Layout>
 )
 
 Media.getInitialProps = async function (context) {
   const { id } = context.query
-  const res = await fetch(`https://api.tvmaze.com/shows/${id}`)
-  const show = await res.json()
+  const res = await fetch(`https://images-api.nasa.gov/search?q=&nasa_id=${id}`)
+  const medium = await res.json()
 
-  console.log(`Fetched show: ${show.name}`)
+  console.log(medium.collection.items);
+  console.log(`Fetched media: ${medium.collection.items[0].data[0].title}`)
 
-  return { show }
+  return { medium }
 }
 
 export default Media

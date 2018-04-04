@@ -72,6 +72,66 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Gallery.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head__ = __webpack_require__("next/head");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_head__);
+var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Gallery.js';
+
+
+
+var scriptTest = function scriptTest() {
+  return Galleria ? $("body").text('Galleria works') : $("body").text('NO Galleria');
+};
+
+var Gallery = function Gallery() {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      }
+    },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'button',
+      { onClick: scriptTest, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        }
+      },
+      'Test Script'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_next_head___default.a,
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        }
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        }
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        }
+      })
+    )
+  );
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Gallery);
+
+/***/ }),
+
 /***/ "./components/Header.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -94,21 +154,21 @@ var Header = function Header() {
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 8
+        lineNumber: 9
       }
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
       { href: "/", __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 10
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "a",
         { style: linkStyle, __source: {
             fileName: _jsxFileName,
-            lineNumber: 10
+            lineNumber: 11
           }
         },
         "Home"
@@ -118,14 +178,14 @@ var Header = function Header() {
       __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
       { href: "/about", __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 13
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "a",
         { style: linkStyle, __source: {
             fileName: _jsxFileName,
-            lineNumber: 13
+            lineNumber: 14
           }
         },
         "About"
@@ -145,7 +205,9 @@ var Header = function Header() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Header__ = __webpack_require__("./components/Header.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Gallery__ = __webpack_require__("./components/Gallery.js");
 var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Layout.js';
+
 
 
 
@@ -160,13 +222,19 @@ var Layout = function Layout(props) {
     'div',
     { style: layoutStyle, __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 12
       }
     },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Gallery__["a" /* default */], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      }
+    }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Header__["a" /* default */], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 14
       }
     }),
     props.children
@@ -215,7 +283,7 @@ var Media = function Media(props) {
           lineNumber: 6
         }
       },
-      props.show.name
+      props.medium.collection.items[0].data[0].title
     ),
     __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
       'p',
@@ -225,9 +293,9 @@ var Media = function Media(props) {
           lineNumber: 7
         }
       },
-      props.show.summary
+      props.medium.collection.items[0].data[0].description
     ),
-    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('img', { src: props.show.image.medium, __source: {
+    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('img', { src: props.medium.collection.items[0].links[0].href, __source: {
         fileName: _jsxFileName,
         lineNumber: 8
       }
@@ -237,14 +305,14 @@ var Media = function Media(props) {
 
 Media.getInitialProps = function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee(context) {
-    var id, res, show;
+    var id, res, medium;
     return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             id = context.query.id;
             _context.next = 3;
-            return __WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch___default()('https://api.tvmaze.com/shows/' + id);
+            return __WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch___default()('https://images-api.nasa.gov/search?q=&nasa_id=' + id);
 
           case 3:
             res = _context.sent;
@@ -252,14 +320,15 @@ Media.getInitialProps = function () {
             return res.json();
 
           case 6:
-            show = _context.sent;
+            medium = _context.sent;
 
 
-            console.log('Fetched show: ' + show.name);
+            console.log(medium.collection.items);
+            console.log('Fetched media: ' + medium.collection.items[0].data[0].title);
 
-            return _context.abrupt('return', { show: show });
+            return _context.abrupt('return', { medium: medium });
 
-          case 9:
+          case 10:
           case 'end':
             return _context.stop();
         }
@@ -295,6 +364,13 @@ module.exports = require("babel-runtime/regenerator");
 /***/ (function(module, exports) {
 
 module.exports = require("isomorphic-unfetch");
+
+/***/ }),
+
+/***/ "next/head":
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ }),
 

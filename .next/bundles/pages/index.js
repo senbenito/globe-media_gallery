@@ -4,6 +4,93 @@ module.exports =
           var comp = 
       webpackJsonp([3],{
 
+/***/ "./components/Gallery.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head__ = __webpack_require__("./node_modules/next/head.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_head__);
+var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Gallery.js';
+
+
+(function () {
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+
+
+var scriptTest = function scriptTest() {
+  return Galleria ? $("body").text('Galleria works') : $("body").text('NO Galleria');
+};
+
+var Gallery = function Gallery() {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      }
+    },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'button',
+      { onClick: scriptTest, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        }
+      },
+      'Test Script'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_next_head___default.a,
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        }
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        }
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        }
+      })
+    )
+  );
+};
+
+var _default = Gallery;
+/* harmony default export */ __webpack_exports__["a"] = (_default);
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(scriptTest, 'scriptTest', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Gallery.js');
+  reactHotLoader.register(Gallery, 'Gallery', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Gallery.js');
+  reactHotLoader.register(_default, 'default', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Gallery.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
 /***/ "./components/Header.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -33,21 +120,21 @@ var Header = function Header() {
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 8
+        lineNumber: 9
       }
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
       { href: "/", __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 10
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "a",
         { style: linkStyle, __source: {
             fileName: _jsxFileName,
-            lineNumber: 10
+            lineNumber: 11
           }
         },
         "Home"
@@ -57,14 +144,14 @@ var Header = function Header() {
       __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
       { href: "/about", __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 13
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "a",
         { style: linkStyle, __source: {
             fileName: _jsxFileName,
-            lineNumber: 13
+            lineNumber: 14
           }
         },
         "About"
@@ -104,6 +191,7 @@ var _default = Header;
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Header__ = __webpack_require__("./components/Header.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Gallery__ = __webpack_require__("./components/Gallery.js");
 var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Layout.js';
 
 
@@ -112,6 +200,7 @@ var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boil
 
   enterModule && enterModule(module);
 })();
+
 
 
 
@@ -126,13 +215,19 @@ var Layout = function Layout(props) {
     'div',
     { style: layoutStyle, __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 12
       }
     },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Gallery__["a" /* default */], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      }
+    }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Header__["a" /* default */], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 14
       }
     }),
     props.children
@@ -657,6 +752,14 @@ var warnLink = (0, _utils.execOnce)(_utils.warn);
 
 /***/ }),
 
+/***/ "./node_modules/next/head.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("./node_modules/next/dist/lib/head.js")
+
+
+/***/ }),
+
 /***/ "./node_modules/next/link.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1165,14 +1268,14 @@ var Index = function Index(props) {
       props.media.map(function (medium) {
         return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
           'li',
-          { key: medium.id, __source: {
+          { key: medium.data[0].nasa_id, __source: {
               fileName: _jsxFileName,
               lineNumber: 10
             }
           },
           __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
             __WEBPACK_IMPORTED_MODULE_3_next_link___default.a,
-            { as: '/media/' + medium.id, href: '/media?id=' + medium.id, __source: {
+            { as: '/media/' + medium.data[0].nasa_id, href: '/media?id=' + medium.data[0].nasa_id, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 11
               }
@@ -1185,7 +1288,11 @@ var Index = function Index(props) {
                   lineNumber: 12
                 }
               },
-              medium.name
+              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('img', { src: 'https://images-assets.nasa.gov/image/' + medium.data[0].nasa_id + '/' + medium.data[0].nasa_id + '~thumb.jpg', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 13
+                }
+              })
             )
           )
         );
@@ -1201,7 +1308,7 @@ Index.getInitialProps = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODUL
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return __WEBPACK_IMPORTED_MODULE_4_isomorphic_unfetch___default()('https://api.tvmaze.com/search/shows?q=batman');
+          return __WEBPACK_IMPORTED_MODULE_4_isomorphic_unfetch___default()('https://images-api.nasa.gov/search?q=globe');
 
         case 2:
           res = _context.sent;
@@ -1212,18 +1319,14 @@ Index.getInitialProps = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODUL
           data = _context.sent;
 
 
-          console.log('Media data fetched. Count: ' + data.length);
-
-          data.medium = [];
-          data.map(function (e) {
-            data.medium.push(e.show);
-          });
+          // console.log(`Media data fetched. Count: ${data.collection.items.length}`)
+          console.log(data.collection.items);
 
           return _context.abrupt('return', {
-            media: data.medium
+            media: data.collection.items
           });
 
-        case 10:
+        case 8:
         case 'end':
           return _context.stop();
       }
