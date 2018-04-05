@@ -9,11 +9,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Layout__ = __webpack_require__("./components/Layout.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_next_link__ = __webpack_require__("./node_modules/next/link.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_next_link__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_isomorphic_unfetch__ = __webpack_require__("./node_modules/isomorphic-unfetch/browser.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_isomorphic_unfetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_isomorphic_unfetch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_link__ = __webpack_require__("./node_modules/next/link.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_next_link__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_photo_gallery__ = __webpack_require__("./node_modules/react-photo-gallery/lib/Gallery.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_photo_gallery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_photo_gallery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Layout__ = __webpack_require__("./components/Layout.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_isomorphic_unfetch__ = __webpack_require__("./node_modules/isomorphic-unfetch/browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_isomorphic_unfetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_isomorphic_unfetch__);
 
 var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/index.js';
 
@@ -30,13 +32,14 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 
 
+
 var Index = function Index(props) {
   return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_2__components_Layout__["a" /* default */],
+    __WEBPACK_IMPORTED_MODULE_4__components_Layout__["a" /* default */],
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 6
+        lineNumber: 7
       }
     },
     __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
@@ -44,63 +47,27 @@ var Index = function Index(props) {
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 7
+          lineNumber: 8
         }
       },
       'GLOBE Media Gallery'
     ),
-    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-      'ul',
-      {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 8
-        }
-      },
-      props.media.map(function (medium) {
-        return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-          'li',
-          { key: medium.data[0].nasa_id, __source: {
-              fileName: _jsxFileName,
-              lineNumber: 10
-            }
-          },
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_next_link___default.a,
-            { as: '/media/' + medium.data[0].nasa_id, href: '/media?id=' + medium.data[0].nasa_id, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 11
-              }
-            },
-            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-              'a',
-              {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 12
-                }
-              },
-              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('img', { src: 'https://images-assets.nasa.gov/image/' + medium.data[0].nasa_id + '/' + medium.data[0].nasa_id + '~thumb.jpg', __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 12
-                }
-              })
-            )
-          )
-        );
-      })
-    )
+    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_photo_gallery___default.a, { photos: props.photos, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      }
+    })
   );
 };
 
 Index.getInitialProps = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
-  var res, data;
+  var res, data, photos;
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return __WEBPACK_IMPORTED_MODULE_4_isomorphic_unfetch___default()('https://images-api.nasa.gov/search?q=globe');
+          return __WEBPACK_IMPORTED_MODULE_5_isomorphic_unfetch___default()('https://images-api.nasa.gov/search?q=globe');
 
         case 2:
           res = _context.sent;
@@ -109,16 +76,26 @@ Index.getInitialProps = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODUL
 
         case 5:
           data = _context.sent;
-
-
-          console.log('Media data fetched. Count: ' + data.collection.items.length);
-          // console.log(data.collection.items);
-
-          return _context.abrupt('return', {
-            media: data.collection.items
+          _context.next = 8;
+          return data.collection.items.map(function (datum) {
+            new Object({ src: datum.links[0].href,
+              width: 4,
+              length: 3 });
           });
 
         case 8:
+          photos = _context.sent;
+
+
+          console.log('Media data fetched. Count: ' + data.collection.items.length);
+          console.log(photos[0].links[0].href);
+
+          return _context.abrupt('return', {
+            media: data.collection.items,
+            photos: photos
+          });
+
+        case 12:
         case 'end':
           return _context.stop();
       }
@@ -168,4 +145,4 @@ var _default = Index;
 /***/ })
 
 })
-//# sourceMappingURL=3.36353a0a821f7c5c6a8f.hot-update.js.map
+//# sourceMappingURL=3.3b0b6850681a84fd66e9.hot-update.js.map

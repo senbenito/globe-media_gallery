@@ -1,8 +1,8 @@
 module.exports =
 
-        __NEXT_REGISTER_PAGE('/', function() {
+        __NEXT_REGISTER_PAGE('/media', function() {
           var comp = 
-      webpackJsonp([3],{
+      webpackJsonp([4],{
 
 /***/ "./components/Header.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1074,336 +1074,6 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ "./node_modules/react-photo-gallery/lib/Gallery.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__("./node_modules/react/cjs/react.development.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__("./node_modules/prop-types/index.js");
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _Photo = __webpack_require__("./node_modules/react-photo-gallery/lib/Photo.js");
-
-var _Photo2 = _interopRequireDefault(_Photo);
-
-var _utils = __webpack_require__("./node_modules/react-photo-gallery/lib/utils.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Gallery = function (_React$Component) {
-  _inherits(Gallery, _React$Component);
-
-  function Gallery() {
-    _classCallCheck(this, Gallery);
-
-    var _this = _possibleConstructorReturn(this, (Gallery.__proto__ || Object.getPrototypeOf(Gallery)).call(this));
-
-    _this.state = {
-      containerWidth: 0
-    };
-    _this.handleResize = _this.handleResize.bind(_this);
-    _this.handleClick = _this.handleClick.bind(_this);
-    return _this;
-  }
-
-  _createClass(Gallery, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.setState({ containerWidth: Math.floor(this._gallery.clientWidth) });
-      window.addEventListener('resize', this.handleResize);
-    }
-  }, {
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate() {
-      if (this._gallery.clientWidth !== this.state.containerWidth) {
-        this.setState({ containerWidth: Math.floor(this._gallery.clientWidth) });
-      }
-    }
-  }, {
-    key: 'shouldComponentUpdate',
-    value: function shouldComponentUpdate() {
-      return true;
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      window.removeEventListener('resize', this.handleResize, false);
-    }
-  }, {
-    key: 'handleResize',
-    value: function handleResize(e) {
-      this.setState({ containerWidth: Math.floor(this._gallery.clientWidth) });
-    }
-  }, {
-    key: 'handleClick',
-    value: function handleClick(event, _ref) {
-      var index = _ref.index;
-      var _props = this.props,
-          photos = _props.photos,
-          onClick = _props.onClick;
-
-      onClick(event, {
-        index: index,
-        photo: photos[index],
-        previous: photos[index - 1] || null,
-        next: photos[index + 1] || null
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      var _props$ImageComponent = this.props.ImageComponent,
-          ImageComponent = _props$ImageComponent === undefined ? _Photo2.default : _props$ImageComponent;
-      // subtract 1 pixel because the browser may round up a pixel
-
-      var width = this.state.containerWidth - 1;
-      var _props2 = this.props,
-          photos = _props2.photos,
-          columns = _props2.columns,
-          margin = _props2.margin,
-          onClick = _props2.onClick;
-
-      var thumbs = (0, _utils.computeSizes)({ width: width, columns: columns, margin: margin, photos: photos });
-      return _react2.default.createElement(
-        'div',
-        { className: 'react-photo-gallery--gallery' },
-        _react2.default.createElement(
-          'div',
-          { ref: function ref(c) {
-              return _this2._gallery = c;
-            } },
-          thumbs.map(function (photo, index) {
-            var width = photo.width,
-                height = photo.height;
-
-            return _react2.default.createElement(ImageComponent, {
-              key: photo.key || photo.src,
-              margin: margin,
-              index: index,
-              photo: photo,
-              onClick: onClick ? _this2.handleClick : null
-            });
-          })
-        ),
-        _react2.default.createElement('div', { style: { content: '', display: 'table', clear: 'both' } })
-      );
-    }
-  }]);
-
-  return Gallery;
-}(_react2.default.Component);
-
-Gallery.propTypes = {
-  photos: _propTypes2.default.arrayOf(_Photo.photoPropType).isRequired,
-  onClick: _propTypes2.default.func,
-  columns: _propTypes2.default.number,
-  margin: _propTypes2.default.number,
-  ImageComponent: _propTypes2.default.func
-};
-
-Gallery.defaultProps = {
-  columns: 3,
-  margin: 2
-};
-
-exports.default = Gallery;
-
-/***/ }),
-
-/***/ "./node_modules/react-photo-gallery/lib/Photo.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.photoPropType = undefined;
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__("./node_modules/react/cjs/react.development.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__("./node_modules/prop-types/index.js");
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var imgWithClick = { cursor: 'pointer' };
-
-var Photo = function (_PureComponent) {
-  _inherits(Photo, _PureComponent);
-
-  function Photo() {
-    _classCallCheck(this, Photo);
-
-    var _this = _possibleConstructorReturn(this, (Photo.__proto__ || Object.getPrototypeOf(Photo)).call(this));
-
-    _this.handleClick = _this.handleClick.bind(_this);
-    return _this;
-  }
-
-  _createClass(Photo, [{
-    key: 'handleClick',
-    value: function handleClick(event) {
-      var _props = this.props,
-          onClick = _props.onClick,
-          index = _props.index,
-          photo = _props.photo;
-
-      onClick(event, { photo: photo, index: index });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _props2 = this.props,
-          photo = _props2.photo,
-          onClick = _props2.onClick,
-          margin = _props2.margin;
-
-      var imgStyle = { display: 'block', float: 'left', margin: margin };
-      return _react2.default.createElement('img', _extends({
-        style: onClick ? _extends({}, imgStyle, imgWithClick) : imgStyle
-      }, photo, {
-        onClick: onClick ? this.handleClick : null
-      }));
-    }
-  }]);
-
-  return Photo;
-}(_react.PureComponent);
-
-var photoPropType = exports.photoPropType = _propTypes2.default.shape({
-  src: _propTypes2.default.string.isRequired,
-  width: _propTypes2.default.number.isRequired,
-  height: _propTypes2.default.number.isRequired,
-  alt: _propTypes2.default.string,
-  title: _propTypes2.default.string,
-  srcSet: _propTypes2.default.array,
-  sizes: _propTypes2.default.array
-});
-
-Photo.propTypes = {
-  index: _propTypes2.default.number,
-  onClick: _propTypes2.default.func,
-  photo: photoPropType
-};
-
-exports.default = Photo;
-
-/***/ }),
-
-/***/ "./node_modules/react-photo-gallery/lib/utils.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-exports.round = round;
-exports.ratio = ratio;
-exports.computeSizes = computeSizes;
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-function round(value, decimals) {
-  if (!decimals) decimals = 0;
-  return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals);
-}
-
-// return two decimal places rounded number
-function ratio(_ref) {
-  var width = _ref.width,
-      height = _ref.height;
-
-  return round(width / height, 2);
-}
-
-// takes the Gallery's photos prop object, width of the container,
-// margin between photos Gallery prop, and columns Gallery prop.
-// calculates, sizes based on columns and returns the photos object with new height/width props
-function computeSizes(_ref2) {
-  var photos = _ref2.photos,
-      columns = _ref2.columns,
-      width = _ref2.width,
-      margin = _ref2.margin;
-
-  if (!width) {
-    return [];
-  }
-  // divide photos over rows, max cells based on `columns`
-  // effectively resulting in [[0, 1, 2], [3, 4, 5], [6, 7]]
-  var rows = photos.reduce(function (acc, cell, idx) {
-    var row = Math.floor(idx / columns);
-    acc[row] = acc[row] ? [].concat(_toConsumableArray(acc[row]), [cell]) : [cell]; // eslint-disable-line no-param-reassign
-    return acc;
-  }, []);
-
-  // calculate total ratio of each row, and adjust each cell height and width
-  // accordingly.
-  var lastRowIndex = rows.length - 1;
-  var rowsWithSizes = rows.map(function (row, rowIndex) {
-    var totalRatio = row.reduce(function (result, photo) {
-      return result + ratio(photo);
-    }, 0);
-    var rowWidth = width - row.length * (margin * 2);
-
-    // assign height, but let height of a single photo in the last
-    // row not expand across columns so divide by columns
-    var height = rowIndex !== lastRowIndex || row.length > 1 ? // eslint-disable-line
-    rowWidth / totalRatio : rowWidth / columns / totalRatio;
-
-    return row.map(function (photo) {
-      return _extends({}, photo, {
-        height: round(height, 1),
-        width: round(height * ratio(photo), 1)
-      });
-    });
-  });
-  return rowsWithSizes.reduce(function (acc, row) {
-    return [].concat(_toConsumableArray(acc), _toConsumableArray(row));
-  }, []);
-}
-
-/***/ }),
-
 /***/ "./node_modules/webpack/buildin/harmony-module.js":
 /***/ (function(module, exports) {
 
@@ -1435,7 +1105,7 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
-/***/ "./pages/index.js":
+/***/ "./pages/media.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1444,15 +1114,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_link__ = __webpack_require__("./node_modules/next/link.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_next_link__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_photo_gallery__ = __webpack_require__("./node_modules/react-photo-gallery/lib/Gallery.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_photo_gallery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_photo_gallery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Layout__ = __webpack_require__("./components/Layout.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_isomorphic_unfetch__ = __webpack_require__("./node_modules/isomorphic-unfetch/browser.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_isomorphic_unfetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_isomorphic_unfetch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Layout_js__ = __webpack_require__("./components/Layout.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch__ = __webpack_require__("./node_modules/isomorphic-unfetch/browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch__);
 
-var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/index.js';
+var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/media.js';
 
 
 (function () {
@@ -1466,15 +1132,13 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 
 
-
-
-var Index = function Index(props) {
+var Media = function Media(props) {
   return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_4__components_Layout__["a" /* default */],
+    __WEBPACK_IMPORTED_MODULE_2__components_Layout_js__["a" /* default */],
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 7
+        lineNumber: 5
       }
     },
     __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
@@ -1482,67 +1146,67 @@ var Index = function Index(props) {
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 8
+          lineNumber: 6
         }
       },
-      'GLOBE Media Gallery'
+      props.medium.collection.items[0].data[0].title
     ),
-    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_photo_gallery___default.a, { photos: props.photos, columns: 5, __source: {
+    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+      'p',
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 7
+        }
+      },
+      props.medium.collection.items[0].data[0].description
+    ),
+    __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('img', { src: props.medium.collection.items[0].links[0].href, __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 8
       }
     })
   );
 };
 
-var makeGalleryArray = function makeGalleryArray(imageObj) {
-  return { nasa_id: imageObj.data[0].nasa_id,
-    src: imageObj.links[0].href,
-    width: 1,
-    height: 1 };
-};
+Media.getInitialProps = function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee(context) {
+    var id, res, medium;
+    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            id = context.query.id;
+            _context.next = 3;
+            return __WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch___default()('https://images-api.nasa.gov/search?q=&nasa_id=' + id);
 
-Index.getInitialProps = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
-  var res, data, photos;
-  return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          _context.next = 2;
-          return __WEBPACK_IMPORTED_MODULE_5_isomorphic_unfetch___default()('https://images-api.nasa.gov/search?q=globe');
+          case 3:
+            res = _context.sent;
+            _context.next = 6;
+            return res.json();
 
-        case 2:
-          res = _context.sent;
-          _context.next = 5;
-          return res.json();
-
-        case 5:
-          data = _context.sent;
-          _context.next = 8;
-          return data.collection.items.map(function (datum) {
-            return makeGalleryArray(datum);
-          });
-
-        case 8:
-          photos = _context.sent;
+          case 6:
+            medium = _context.sent;
 
 
-          console.log('Media data fetched. Count: ' + data.collection.items.length);
+            console.log('Fetched media: ' + medium.collection.items[0].data[0].title);
 
-          return _context.abrupt('return', {
-            media: data.collection.items,
-            photos: photos
-          });
+            return _context.abrupt('return', { medium: medium });
 
-        case 11:
-        case 'end':
-          return _context.stop();
+          case 9:
+          case 'end':
+            return _context.stop();
+        }
       }
-    }
-  }, _callee, this);
-}));
+    }, _callee, this);
+  }));
 
-var _default = Index;
+  return function (_x) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+var _default = Media;
 /* harmony default export */ __webpack_exports__["default"] = (_default);
 ;
 
@@ -1555,9 +1219,8 @@ var _default = Index;
     return;
   }
 
-  reactHotLoader.register(Index, 'Index', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/index.js');
-  reactHotLoader.register(makeGalleryArray, 'makeGalleryArray', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/index.js');
-  reactHotLoader.register(_default, 'default', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/index.js');
+  reactHotLoader.register(Media, 'Media', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/media.js');
+  reactHotLoader.register(_default, 'default', '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/media.js');
   leaveModule(module);
 })();
 
@@ -1578,22 +1241,22 @@ var _default = Index;
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/media")
   
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./pages/index.js");
+module.exports = __webpack_require__("./pages/media.js");
 
 
 /***/ })
 
-},[2])
+},[3])
           return { page: comp.default }
         })
       ;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=media.js.map
