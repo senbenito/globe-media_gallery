@@ -2,6 +2,9 @@ import React from 'react'
 import Masonry from 'react-masonry-component'
 import fetch from 'isomorphic-unfetch'
 import Link from 'next/link'
+import {Button} from 'reactstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const masonryOptions = {
   columnWidth: '.grid-sizer',
@@ -51,6 +54,7 @@ export default class Gallery extends React.Component{
           img {width: inherit;}
         `}</style>
         <h1>GLOBE Media Gallery</h1>
+        <Button onClick={this.fetchImages}>Bootstrap Button!</Button>
         <Masonry
           className={'grid'} // default ''
           options={masonryOptions} // default {}
