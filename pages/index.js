@@ -1,17 +1,20 @@
 import Layout from '../components/Layout'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
+import {Alert} from 'reactstrap'
 
 const Index = (props) => (
   <Layout>
     <h1>GLOBE Media Gallery</h1>
     <div>
       {props.media.map(medium => (
-        <Link as={`/media/${medium.data[0].nasa_id}`} href={`/media?id=${medium.data[0].nasa_id}`}>
-          <a><img src={`https://images-assets.nasa.gov/image/${medium.data[0].nasa_id}/${medium.data[0].nasa_id}~thumb.jpg`}/></a>
+        <Link as={`/media/${medium.data[0].nasa_id}`} href={`/media?id=${medium.data[0].nasa_id}`}
+        key={medium.data[0].nasa_id}>
+          <a><img src={medium.links[0].href}/></a>
         </Link>
       ))}
     </div>
+    <Alert color="danger">Danger!</Alert>
   </Layout>
 )
 
@@ -23,7 +26,7 @@ Index.getInitialProps = async function() {
   // console.log(data.collection.items);
 
   return {
-    media: data.collection.items
+    media: data.collection.items.slice(0,4)
   }
 }
 
