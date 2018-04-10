@@ -67,129 +67,10 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./components/Header.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__("next/link");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
-var _jsxFileName = "/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Header.js";
-
-
-
-var linkStyle = {
-  marginRight: 15
-};
-
-var Header = function Header() {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    "div",
-    {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 9
-      }
-    },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
-      { href: "/", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10
-        }
-      },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "a",
-        { style: linkStyle, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 11
-          }
-        },
-        "Home"
-      )
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
-      { href: "/about", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        }
-      },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "a",
-        { style: linkStyle, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 14
-          }
-        },
-        "About"
-      )
-    )
-  );
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (Header);
-
-/***/ }),
-
-/***/ "./components/Layout.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Header__ = __webpack_require__("./components/Header.js");
-var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/components/Layout.js';
-
-
-
-<<<<<<< HEAD
-var layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-};
-
-var Layout = function Layout(props) {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'div',
-    { style: layoutStyle, __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10
-=======
-var Layout = function Layout(props) {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'div',
-    {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 4
->>>>>>> 2c4847f8ab8bd56b285d9f094d870f5ede22f3b6
-      }
-    },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Header__["a" /* default */], {
-      __source: {
-        fileName: _jsxFileName,
-<<<<<<< HEAD
-        lineNumber: 11
-=======
-        lineNumber: 5
->>>>>>> 2c4847f8ab8bd56b285d9f094d870f5ede22f3b6
-      }
-    }),
-    props.children
-  );
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (Layout);
-
-/***/ }),
 
 /***/ "./pages/media.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -200,9 +81,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Layout_js__ = __webpack_require__("./components/Layout.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch__ = __webpack_require__("isomorphic-unfetch");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_isomorphic_unfetch__ = __webpack_require__("isomorphic-unfetch");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_isomorphic_unfetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_isomorphic_unfetch__);
 
 var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/media.js';
 
@@ -211,14 +91,13 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 
 
-
 var Media = function Media(props) {
   return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_2__components_Layout_js__["a" /* default */],
+    'div',
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 5
+        lineNumber: 4
       }
     },
     __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
@@ -226,7 +105,7 @@ var Media = function Media(props) {
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 6
+          lineNumber: 5
         }
       },
       props.medium.collection.items[0].data[0].title
@@ -236,14 +115,14 @@ var Media = function Media(props) {
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 7
+          lineNumber: 6
         }
       },
       props.medium.collection.items[0].data[0].description
     ),
     __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('img', { src: props.medium.collection.items[0].links[0].href, __source: {
         fileName: _jsxFileName,
-        lineNumber: 8
+        lineNumber: 7
       }
     })
   );
@@ -258,7 +137,7 @@ Media.getInitialProps = function () {
           case 0:
             id = context.query.id;
             _context.next = 3;
-            return __WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch___default()('https://images-api.nasa.gov/search?q=&nasa_id=' + id);
+            return __WEBPACK_IMPORTED_MODULE_2_isomorphic_unfetch___default()('https://images-api.nasa.gov/search?q=&nasa_id=' + id);
 
           case 3:
             res = _context.sent;
@@ -290,7 +169,7 @@ Media.getInitialProps = function () {
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("./pages/media.js");
@@ -309,13 +188,6 @@ module.exports = require("babel-runtime/regenerator");
 /***/ (function(module, exports) {
 
 module.exports = require("isomorphic-unfetch");
-
-/***/ }),
-
-/***/ "next/link":
-/***/ (function(module, exports) {
-
-module.exports = require("next/link");
 
 /***/ }),
 

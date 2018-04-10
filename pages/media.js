@@ -1,12 +1,11 @@
-import Layout from '../components/Layout.js'
 import fetch from 'isomorphic-unfetch'
 
 const Media =  (props) => (
-    <Layout>
+    <div>
        <h1>{props.medium.collection.items[0].data[0].title}</h1>
        <p>{props.medium.collection.items[0].data[0].description}</p>
        <img src={props.medium.collection.items[0].links[0].href}/>
-    </Layout>
+    </div>
 )
 
 Media.getInitialProps = async function (context) {
