@@ -81,7 +81,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_document__ = __webpack_require__("next/document");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_document___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_document__);
-var _jsxFileName = "/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/_document.js";
+var _jsxFileName = '/Users/shannon.rivers/Projects/GLOBE-Media_Gallery/next-boilerplate/pages/_document.js';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -105,10 +105,10 @@ var MyDocument = function (_Document) {
   }
 
   _createClass(MyDocument, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "html",
+        'html',
         {
           __source: {
             fileName: _jsxFileName,
@@ -123,30 +123,55 @@ var MyDocument = function (_Document) {
               lineNumber: 7
             }
           },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", { rel: "stylesheet", href: "/_next/static/style.css", __source: {
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width', __source: {
               fileName: _jsxFileName,
               lineNumber: 8
+            }
+          }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { rel: 'stylesheet', href: '/_next/static/style.css', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 9
+            }
+          }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css', integrity: 'sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4', crossOrigin: 'anonymous', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 10
             }
           })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "body",
+          'body',
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 10
+              lineNumber: 12
             }
           },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Main"], {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 11
+              lineNumber: 13
             }
           }),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 12
+              lineNumber: 14
+            }
+          }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity: 'sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossOrigin: 'anonymous', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 15
+            }
+          }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js', integrity: 'sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ', crossOrigin: 'anonymous', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 16
+            }
+          }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js', integrity: 'sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm', crossOrigin: 'anonymous', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 17
             }
           })
         )
