@@ -4,16 +4,20 @@ import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 import {Alert} from 'reactstrap'
 
-const Index = () => (
+const Index = (props) => (
   <Layout>
     <h1>GLOBE Media Gallery</h1>
-    <div>
+    <div className="container">
+      <div className="row">
       {props.media.map(medium => (
-        <Link as={`/media/${medium.data[0].nasa_id}`} href={`/media?id=${medium.data[0].nasa_id}`}
-        key={medium.data[0].nasa_id}>
-          <a><img src={medium.links[0].href}/></a>
-        </Link>
+        <div className="col-md-4" key={medium.data[0].nasa_id}>
+          <Link as={`/media/${medium.data[0].nasa_id}`} href={`/media?id=${medium.data[0].nasa_id}`}
+          key={medium.data[0].nasa_id}>
+            <img src={medium.links[0].href}/>
+          </Link>
+        </div>
       ))}
+      </div>
     </div>
     <Alert color="danger">Danger!</Alert>
   </Layout>
