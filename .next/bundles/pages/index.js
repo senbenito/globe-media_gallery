@@ -103,87 +103,61 @@ var Gallery = function (_React$Component) {
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
         'div',
-        {
-          __source: {
+        { className: 'container', __source: {
             fileName: _jsxFileName,
             lineNumber: 29
           }
         },
         __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-          'h1',
-          {
-            __source: {
+          'div',
+          { className: 'row', __source: {
               fileName: _jsxFileName,
               lineNumber: 30
             }
           },
-          'GLOBE Media Gallery'
-        ),
-        this.state.media.map(function (medium, i) {
-          return i % 2 === 0 ? __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_next_link___default.a,
-            { as: '/media/' + medium.data[0].nasa_id,
-              href: '/media?id=' + medium.data[0].nasa_id,
-              key: medium.data[0].nasa_id, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 33
-              }
-            },
-            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-              'a',
-              {
-                __source: {
+          this.state.media.map(function (medium, i) {
+            return i < 3 ? __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_3_next_link___default.a,
+              { as: '/media/' + medium.data[0].nasa_id,
+                href: '/media?id=' + medium.data[0].nasa_id,
+                key: medium.data[0].nasa_id, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 36
+                  lineNumber: 33
                 }
               },
               __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
                 'div',
-                { className: 'alert-primary', __source: {
+                { className: 'col-sm', __source: {
                     fileName: _jsxFileName,
                     lineNumber: 36
                   }
                 },
-                __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('img', { src: medium.links[0].href, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 37
-                  }
-                })
+                __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+                  'a',
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 36
+                    }
+                  },
+                  __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('img', { src: medium.links[0].href, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 37
+                    }
+                  })
+                )
               )
-            )
-          ) : __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_next_link___default.a,
-            { as: '/media/' + medium.data[0].nasa_id,
-              href: '/media?id=' + medium.data[0].nasa_id,
-              key: medium.data[0].nasa_id, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 41
-              }
-            },
-            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-              'a',
-              {
-                __source: {
+            ) : __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+              'p',
+              { key: 'text1', __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 44
+                  lineNumber: 41
                 }
               },
-              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-                'div',
-                { className: 'grid-item grid-item--width2', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 44
-                  }
-                },
-                __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('img', { src: medium.links[0].href, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 45
-                  }
-                })
-              )
-            )
-          );
-        })
+              'Hello!'
+            );
+          })
+        )
       );
     }
   }, {

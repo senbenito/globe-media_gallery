@@ -137,6 +137,21 @@ var MyDocument = function (_Document) {
               fileName: _jsxFileName,
               lineNumber: 10
             }
+          }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity: 'sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossOrigin: 'anonymous', defer: true, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 11
+            }
+          }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js', integrity: 'sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ', crossOrigin: 'anonymous', defer: true, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 12
+            }
+          }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js', integrity: 'sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm', crossOrigin: 'anonymous', defer: true, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 13
+            }
           })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -144,32 +159,17 @@ var MyDocument = function (_Document) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 12
+              lineNumber: 15
             }
           },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Main"], {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 13
+              lineNumber: 16
             }
           }),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], {
             __source: {
-              fileName: _jsxFileName,
-              lineNumber: 14
-            }
-          }),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity: 'sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossOrigin: 'anonymous', __source: {
-              fileName: _jsxFileName,
-              lineNumber: 15
-            }
-          }),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js', integrity: 'sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ', crossOrigin: 'anonymous', __source: {
-              fileName: _jsxFileName,
-              lineNumber: 16
-            }
-          }),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js', integrity: 'sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm', crossOrigin: 'anonymous', __source: {
               fileName: _jsxFileName,
               lineNumber: 17
             }

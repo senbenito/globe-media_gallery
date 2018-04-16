@@ -26,26 +26,21 @@ export default class Gallery extends React.Component{
 
   render(){
     return(
-      <div>
-        <h1>GLOBE Media Gallery</h1>
-        {this.state.media.map((medium,i) => (
-          (i%2 === 0) ?
-          (<Link as={`/media/${medium.data[0].nasa_id}`}
-            href={`/media?id=${medium.data[0].nasa_id}`}
-            key={medium.data[0].nasa_id}>
-              <a><div className="alert-primary">
-                <img src={medium.links[0].href}/>
-              </div></a>
-          </Link>)
-          :
-          (<Link as={`/media/${medium.data[0].nasa_id}`}
-            href={`/media?id=${medium.data[0].nasa_id}`}
-            key={medium.data[0].nasa_id}>
-            <a><div className="grid-item grid-item--width2">
-              <img src={medium.links[0].href}/>
-            </div></a>
-          </Link>)
-        ))}
+      <div className="container">
+        <div className="row">
+          {this.state.media.map((medium,i) => (
+            (i<3) ?
+            (<Link as={`/media/${medium.data[0].nasa_id}`}
+              href={`/media?id=${medium.data[0].nasa_id}`}
+              key={medium.data[0].nasa_id}>
+                <div className="col-sm"><a>
+                  <img src={medium.links[0].href}/>
+                </a></div>
+            </Link>)
+            :
+            (<p key="text1">Hello!</p>)
+          ))}
+        </div>
       </div>
     )
   }
